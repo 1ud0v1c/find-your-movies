@@ -1,11 +1,11 @@
 package com.ludovic.vimont.domain.entities
 
 data class Movie(
-    private val id: Int,
-    private val title: String,
-    private val budget: Int,
-    private val cover: String,
-    private val releaseDate: String,
-    private val note: Double,
-    private val genres: List<Genre>
+    val id: Int,
+    val title: String,
+    val budget: Int,
+    val cover: String,
+    val releaseDate: String,
+    val note: Double,
+    val genres: List<Genre>
 )

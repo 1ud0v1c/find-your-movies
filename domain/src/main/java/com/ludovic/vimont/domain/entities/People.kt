@@ -1,13 +1,13 @@
 package com.ludovic.vimont.domain.entities
 
 data class People(
-    private val id: Int,
-    private val name: String,
-    private val photo: String,
-    private val biography: String,
-    private val birthDay: String,
-    private val deathDay: String?,
-    private val gender: Int,
-    private val popularity: Int,
-    private val profession: String
+    val id: Int,
+    val name: String,
+    val photo: String,
+    val biography: String,
+    val birthDay: String,
+    val deathDay: String?,
+    val gender: Int,
+    val popularity: Int,
+    val profession: String
 )
