@@ -1,2 +1,4 @@
+include ':data'
 include ':app'
+include ':domain'
 rootProject.name = "FindYourMovies"
