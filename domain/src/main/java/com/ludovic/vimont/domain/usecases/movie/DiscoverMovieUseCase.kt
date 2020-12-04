@@ -11,6 +11,6 @@ class DiscoverMovieUseCase(private val movieRepository: MovieRepository): UseCas
         return movieRepository.discover(input.voteAverage, input.genre)
     }
 
-    inner class DiscoverInput(val voteAverage: Float,
-                              val genre: List<Genre> = ArrayList())
+    class DiscoverInput(val voteAverage: Double,
+                        val genre: List<Genre> = ArrayList())
 }

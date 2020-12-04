@@ -9,17 +9,16 @@ class FakePeopleRepository: PeopleRepository {
         const val PEOPLE_LIST_SIZE = 10_000
         const val GET_PEOPLE_ERROR_MESSAGE = "The profile couldn't been found..."
     }
-    private val listOfPeople = ArrayList<People>()
+    private val peoples = ArrayList<People>()
 
     init {
         for (index in 1..PEOPLE_LIST_SIZE) {
-            listOfPeople.add(MockEntitiesHelper.buildPeople(index))
+            peoples.add(MockEntitiesHelper.buildPeople(index))
         }
-        println("listOfPeople size: ${listOfPeople.size}")
     }
 
     override fun get(id: Int): StateData<People> {
-        val foundElement: People? = listOfPeople.find { people: People ->
+        val foundElement: People? = peoples.find { people: People ->
             people.id == id
         }
         foundElement?.let { foundPeople: People ->
